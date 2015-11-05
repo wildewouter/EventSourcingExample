@@ -3,4 +3,12 @@
 
 namespace Event;
 
-final class AccountWasCreated extends AccountExistanceEvent {}
+use Buttercup\Protects\IdentifiesAggregate;
+
+final class AccountWasCreated extends AccountExistanceEvent
+{
+    public function __construct(IdentifiesAggregate $accountId)
+    {
+        parent::__construct($accountId);
+    }
+}
