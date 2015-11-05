@@ -5,6 +5,13 @@
     "ramsey/uuid": "3.0.1"
   },
   "autoload": {
-    "psr-0": { "": "src/" }
+    "psr-4": {"": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {"Test\\": "tests/unit"}
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "mockery/mockery": "^0.9.4"
   }
 }

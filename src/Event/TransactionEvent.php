@@ -22,7 +22,7 @@ abstract class TransactionEvent implements DomainEvent
      * @param IdentifiesAggregate $accountId
      * @param float $amount
      */
-    public function __construct($accountId, $amount)
+    public function __construct(IdentifiesAggregate $accountId, $amount)
     {
         $this->accountId = $accountId;
         $this->amount = $amount;
@@ -44,5 +44,13 @@ abstract class TransactionEvent implements DomainEvent
     public function getAmount()
     {
         return $this->amount;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
 }
