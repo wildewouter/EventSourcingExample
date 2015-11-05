@@ -1,0 +1,10 @@
+{
+  "require": {
+    "phpunit/phpunit": "^4.8",
+    "buttercup/protects": "dev-master",
+    "ramsey/uuid": "3.0.1"
+  },
+  "autoload": {
+    "psr-0": { "": "src/" }
+  }
+}
