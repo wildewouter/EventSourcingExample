@@ -28,7 +28,7 @@ final class Account implements RecordsEvents, IsEventSourced
     private function __construct(IdentifiesAggregate $accountId)
     {
         $this->accountId = $accountId;
-        $this->accountBalance = new AccountBalance(0);
+        $this->accountBalance = new AccountBalance(0.0);
     }
 
     /**

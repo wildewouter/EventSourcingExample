@@ -11,8 +11,16 @@ class AccountBalance
     /** @var float */
     private $balance;
 
+    /**
+     * AccountBalance constructor.
+     * @param float $balance
+     * @throws \Exception
+     */
     public function __construct($balance)
     {
+        if (! is_float($balance)) {
+            throw new \Exception("Balance should be float number");
+        }
         $this->balance = $balance;
     }
 
