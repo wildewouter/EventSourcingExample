@@ -102,7 +102,7 @@ final class Account implements RecordsEvents, IsEventSourced
      */
     public function clearRecordedEvents()
     {
-        // TODO: Implement clearRecordedEvents() method.
+        $this->recordedEvents = array();
     }
 
     /**
