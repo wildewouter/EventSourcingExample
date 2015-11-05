@@ -8,6 +8,6 @@ class CreateAccountHandler
 {
     public function handleCommand(CreateAccount $command)
     {
-        $command->getAccount();
+        $command->createAccount();
     }
 }
