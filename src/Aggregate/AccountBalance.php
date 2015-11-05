@@ -2,6 +2,7 @@
 
 
 namespace Aggregate;
+use Exception\IncorrectTypeException;
 
 /**
  * Immutable class
@@ -14,13 +15,14 @@ class AccountBalance
     /**
      * AccountBalance constructor.
      * @param float $balance
-     * @throws \Exception
+     * @throws IncorrectTypeException
      */
     public function __construct($balance)
     {
         if (! is_float($balance)) {
-            throw new \Exception("Balance should be float number");
+            throw new IncorrectTypeException("Balance should be float number");
         }
+
         $this->balance = $balance;
     }
 

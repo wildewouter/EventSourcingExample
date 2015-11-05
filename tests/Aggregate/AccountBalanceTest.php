@@ -9,7 +9,7 @@ use Aggregate\AccountBalance;
 class AccountBalanceTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException \Exception
+     * @expectedException \Exception\IncorrectTypeException
      * @expectedExceptionMessage Balance should be float number
      */
     public function testBalanceShouldReceiveNumber()

@@ -5,6 +5,7 @@ namespace Aggregate;
 
 
 use Buttercup\Protects\IdentifiesAggregate;
+use Exception\IncorrectTypeException;
 
 class AccountId implements IdentifiesAggregate
 {
@@ -20,9 +21,13 @@ class AccountId implements IdentifiesAggregate
      * Creates an identifier object from a string representation
      * @param $string
      * @return IdentifiesAggregate
+     * @throws IncorrectTypeException
      */
     public static function fromString($string)
     {
+        if (! is_string($string)) {
+            throw new IncorrectTypeException('Provided type should be string');
+        }
         return new AccountId($string);
     }
 
