@@ -14,7 +14,7 @@ use Event\MoneyWasDeductedFromAccount;
 use MemoryStorage\MemStorage;
 use Ramsey\Uuid\Uuid;
 
-final class Account implements RecordsEvents, IsEventSourced
+final class Account implements AccountAggregateRoot, RecordsEvents, IsEventSourced
 {
     /** @var IdentifiesAggregate */
     private $accountId;
